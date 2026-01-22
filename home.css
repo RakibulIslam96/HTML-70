@@ -1,0 +1,14 @@
+form {
+    background-color: rgb(150, 6, 49);
+    color: aliceblue;
+    text-align: center;
+    border-radius: 20px ;
+    box-shadow: inset;
+}
+h4{ background-color: rgb(4, 0, 240);
+color: rgb(253, 253, 253);
+border-radius: 50pxs;}
+input{
+    border-radius: 5px;
+    -ms-touch-action: auto;
+}
