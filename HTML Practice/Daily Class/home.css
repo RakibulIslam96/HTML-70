@@ -1,3 +1,8 @@
+img{
+    margin: auto;
+    max-height: fit-content;
+    min-height: fit-content;
+}
 form {
     background-color: rgb(150, 6, 49);
     color: aliceblue;
