@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablr</title>
+    <style>
+        table,th,td {
+            border: 2px solid black;
+
+        }
+    </style>
+</head>
+<body>
+    <marquee behavior="" direction="left to right" style="">
+         <h1 style="text-align: center; background-color: aqua;"> Table With Merge (Colspan & Rowspan)</h1>
+    </marquee>
+    <div style="text-align: center;align-items: center; border-radius: 12px;">
+        <table border="2px" style="border-collapse: collapse; width:100%; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: 500; ">
+            <tr>
+                <th> <strong><u> ID </u></strong></th>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td rowspan="3">01</td>
+                <td rowspan="3">David</td>
+                <td>Math</td>
+                <td>80</td>
+            </tr>
+            <tr>
+               
+             
+                <td>Physics</td>
+                <td> 90</td>
+            </tr>
+            <tr>
+                
+               
+                <td>Computers</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <td rowspan="3">02</td>
+                <td rowspan="3">Alex</td>
+                <td>Math</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                
+                
+                <td>Physics</td>
+                <td>70</td>
+            </tr>
+            <tr>
+               
+            
+                <td>Computers</td>
+                <td>90</td>
+            </tr>
+        </table>
+    </div>
+    <br><br><br><br><br>
+    <h1 style="text-align: center;">I just make a Table with Merge</h1>
+    <table border="1px" style="border-collapse: collapse; width: 100%; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: 500;">
+        <tr>
+            <th colspan="2">ID & Name</th>
+            <th>G-mail</th>
+            <th rowspan="6">Contact</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td rowspan="5">Rakib</td>
+            <td>rakib@gmail.com</td>
+           
+        </tr>
+        <tr>
+            <td>01</td>
+           
+            <td>rakib@gmail.com</td>
+          
+        </tr>
+        <tr>
+            <td>01</td>
+           
+            <td>rakib@gmail.com</td>
+       
+        </tr>
+        <tr>
+            <td>01</td>
+           
+            <td>rakib@gmail.com</td>
+          
+        </tr>
+        <tr>
+            <td>01</td>
+            
+            <td>rakib@gmail.com</td>
+            
+        </tr>
+    </table>
+    <h1 style="text-align: center;">Table Make with Rowspan and Colspan</h1>
+    <table border="1px" style="border-collapse: collapse; width: 100%; text-align: center;">
+        <tr style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            <th colspan="2">ID & Name</th>
+            <th>G-mail</th>
+            <th rowspan="4">Contact</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td rowspan="3">Rakib</td>
+            <td>a</td>
+           
+
+        </tr>
+        <tr>
+             <td>02</td>
+            
+            <td>x</td>
+        </tr>
+        <tr>
+             <td>03</td>
+           
+            <td>Y</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
