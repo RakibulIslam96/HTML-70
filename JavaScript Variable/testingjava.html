@@ -1,46 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
 </head>
+
 <body>
+    <div class="gb-container">
+        <div class="gb-row gb-row--between gb-row--no-gutters gb-row--top gb-row--middle">
+            <div class="gb-col gb-d-flex">
+                <div class="gb-dropdown gb-dropdown--bubble gb-mr-small gb-mr-sm-1" data-ncid="dropdown-support"><a
+                        class="gb-btn gb-dropdown__toggle gb-btn--default-ghost gb-dropdown__toggle--hide gb-btn--sm"
+                        href="https://www.namecheap.com/support/">Contact us</a>
+                    <div class="gb-dropdown__holder"><a class="gb-dropdown__item"
+                            href="https://support.namecheap.com/index.php?/Tickets/Submit"
+                            data-ncid="dropdown-support-Submit Ticket">Submit Ticket</a><a class="gb-dropdown__item"
+                            href="https://www.namecheap.com/help-center/live-chat/"
+                            data-ncid="dropdown-support-Live Chat">Live Chat</a><a class="gb-dropdown__item"
+                            href="https://www.namecheap.com/support/knowledgebase/article.aspx/9196/5/how-and-where-can-i-file-abuse-complaints"
+                            data-ncid="dropdown-support-Report Abuse">Report Abuse</a></div>
+                </div><a
+                    class="gb-btn gb-btn--default-ghost gb-sign-up gb-mr-sm-1 gb-d-none gb-d-md-block gb-dropdown__toggle--hide gb-btn--sm"
+                    href="https://www.namecheap.com/myaccount/signup/" data-ncid="button-sign-up"><span>Sign
+                        up</span></a>
+                <div class="gb-dropdown gb-dropdown--bubble gb-dropdown--sign-in" data-ncid="dropdown-sign-in"><button
+                        class="gb-btn--default-muted gb-dropdown__toggle--hide gb-btn--sm gb-btn gb-dropdown__toggle"
+                        data-ncid="button-sign-in"><i
+                            class="gb-icon gb-icon-user gb-d-none gb-d-sm-block"></i><span>Sign in</span></button>
+                    <div class="gb-dropdown__holder">
+                        <div class="gb-dropdown__content"><i class="gb-dropdown__item"></i>
+                            <form class="gb-login-form gb-py-2" method="post"
+                                action="https://www.namecheap.com/myaccount/login/"><input type="text"
+                                    name="LoginUserName" data-ncid="input-login-username"
+                                    class="gb-form-control gb-mb-2" autocomplete="off" placeholder="Username">
+                                <div class="gb-form-field gb-form-field--with-action"><input type="password"
+                                        name="LoginPassword" data-ncid="input-login-password"
+                                        class="gb-form-control gb-mb-2" autocomplete="off" placeholder="Password"><i
+                                        class="gb-icon gb-icon--password" data-ncid="icon-password"></i></div><input
+                                    name="sessionEncryptValue" type="hidden"
+                                    value="7q7hFGgdbz71fbrDXkBalb82Z0U5bDbOhBN5nyx6jnkq1LWzAUu3v0vdEoU3HPs3mDWxyJLo96xyyFxGiEvpJ7g4tOS+cX63"><button
+                                    class="gb-btn gb-btn--block gb-btn--secondary gb-mb-2" data-ncid="button-sign-in"
+                                    type="submit"><span>Sign in</span></button>
+                                <div class="gb-text-base gb-text-small"><a class="gb-link gb-link--gray"
+                                        href="https://ap.www.namecheap.com/ResetPassword"
+                                        data-ncid="link-forgot-password"><span class="gb-link__text"><span>Forgot your
+                                                password?</span></span></a></div><a
+                                    class="gb-btn gb-btn--primary gb-btn--block gb-d-md-none gb-mt-2"
+                                    href="https://www.namecheap.com/myaccount/signup/"><span>Sign up</span></a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gb-col-auto gb-d-flex gb-row--middle">
+                <div class="gb-dropdown gb-dropdown--bubble gb-dropdown--bubble-right gb-cart"
+                    data-ncid="dropdown-cart"><a
+                        class="gb-btn--default-ghost gb-dropdown__toggle--hide gb-btn--icon gb-btn gb-dropdown__toggle"
+                        aria-label="Your Cart" href="https://www.namecheap.com/shoppingcart/" data-ncid="button-cart"><i
+                            class="gb-icon gb-icon-cart"></i></a>
+                    <div class="gb-dropdown__holder"><i class="gb-dropdown__item"></i>
+                        <div class="gb-panel">
+                            <header class="gb-panel__header"><i class="gb-icon gb-icon-cart"></i><span
+                                    class="gb-text-reset"><span>Your Cart</span></span></header>
+                            <div class="gb-panel__body gb-text-base">
+                                <div class="gb-row gb-row--middle gb-mb-3">
+                                    <div class="gb-col"><span>Subtotal</span></div>
+                                    <div class="gb-col-auto" data-ncid="cart-subtotal">$0.00</div>
+                                </div><a class="gb-btn gb-btn--primary gb-btn--block"
+                                    href="https://www.namecheap.com/shoppingcart/"
+                                    data-ncid="button-view-cart"><span>View Cart</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gb-dropdown gb-dropdown--bubble gb-dropdown--currency gb-dropdown--bubble-right gb-ml-1"
+                    data-ncid="dropdown-currency"><span
+                        class="gb-btn--default-ghost gb-dropdown__toggle--hide gb-btn gb-dropdown__toggle">$<span
+                            class="gb-d-none gb-d-md-block">USD</span></span>
+                    <div class="gb-dropdown__holder"><span role="button" tabindex="1" data-ncid="currency-USD"
+                            class="gb-dropdown__item">$ U.S. Dollar</span><span role="button" tabindex="1"
+                            data-ncid="currency-EUR" class="gb-dropdown__item">€ Euro</span><span role="button"
+                            tabindex="1" data-ncid="currency-GBP" class="gb-dropdown__item">£ British Pound</span><span
+                            role="button" tabindex="1" data-ncid="currency-CAD" class="gb-dropdown__item">C$ Canadian
+                            Dollars</span><span role="button" tabindex="1" data-ncid="currency-AUD"
+                            class="gb-dropdown__item">A$ Australian Dollars</span><span role="button" tabindex="1"
+                            data-ncid="currency-INR" class="gb-dropdown__item">Rs Indian Rupees</span><span
+                            role="button" tabindex="1" data-ncid="currency-CNY" class="gb-dropdown__item">¥ China Yuan
+                            RMB</span><a class="gb-dropdown__item gb-d-flex gb-row--between" datancid="link-more-info"
+                            href="https://www.namecheap.com/support/payment/currency-exchange-rates/"><span>More
+                                Info</span><i class="gb-icon gb-icon-next"></i></a></div>
+                </div><button type="button"
+                    class="gb-btn gb-btn--default-ghost gb-btn--icon gb-ml-1 gb-d-none gb-d-lg-block gb-btn--search gb-dropdown__toggle--hide"
+                    data-ncid="button-search" aria-label="Search"><i class="gb-icon gb-icon-search"></i></button>
+            </div>
+        </div>
+    </div>
+    <button onclick="letstry()">Submit</button>
+
     <script>
         //string type
-        let first_name= "Ifty";
-        let last_name= "Rahamn";
-        let full_name = first_name+""+last_name;
+        let first_name = "Ifty";
+        let last_name = "Rahamn";
+        let full_name = first_name + "" + last_name;
         console.log(typeof full_name);
 
         // number type
         let a = 29;
         let b = 21;
-        let x = a+b;
+        let x = a + b;
         console.log(typeof x);
 
         // boolean type
         let p = 5;
         let q = 7;
-        let r = p<q;
+        let r = p < q;
         console.log(r);
 
         //undefine
         let num;
         console.log(num)
         //null (no value)
-        let nv ="";
+        let nv = "";
         console.log(typeof nv);
-        let tv =null;
+        let tv = null;
         console.log(typeof tv);
         // object type
         let car = {
             model: 100,
-            color: "red", 
+            color: "red",
             name: "Toyota"
         }
-     console.log(typeof car);
-     document.write(car.model+"<br>"+car.color +"<br>" +car.name);
+        console.log(typeof car);
+        document.write(car.model + "<br>" + car.color + "<br>" + car.name);
+        //array//
+        let Students = ["Rakib", "Asadul", "Fahim", "Tanjil", "Rafin"];
+        console.log(Students[1]);
+        document.write(Students[1]);
+        function letstry() {
+            document.write("Rakib");
+            document.write(14);
+        }
+       
     </script>
 </body>
+
 </html>
