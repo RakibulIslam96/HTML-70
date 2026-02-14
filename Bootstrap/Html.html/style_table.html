@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h3 class="mb-3">User Panel</h3>
+
+        <table class="table table-bordered table-hover text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Sl No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ifty Islam</td>
+                    <td>
+
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Edit User">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Delete User">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Rakibul Islam</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="tooltip" title="Edit User">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="tooltip" title="Delete User">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Fahim Islam</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="tooltip" title="Edit User">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="tooltip" title="Delete User">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Asadul Islam</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="tooltip" title="Edit User">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="tooltip" title="Delete User">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container mt-5">
+        <h3 class="mb-4" style="text-align: center;"> <button
+                style="border-radius: 10px; background-color: rgb(3, 91, 224); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: #ffffff;">
+                Information Form</button></h3>
+
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Age</label>
+                <input type="number" class="form-control" placeholder="Enter age">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Address</label>
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Country</label>
+                <select class="form-select">
+                    <option selected>Select country</option>
+                    <option>Bangladesh</option>
+                    <option>India</option>
+                    <option>USA</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Gender</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender">
+                    <label class="form-check-label">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender">
+                    <label class="form-check-label">Female</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Skills</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">HTML</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">CSS</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Upload File</label>
+                <input type="file" class="form-control">
+            </div>
+            <div class="mb-3 d-flex gap-2" style="align-items: end;">
+                <button type="submit" class="btn btn-success btn-hover">
+                    Submit
+                </button>
+
+                <button type="reset" class="btn btn-warning btn-hover">
+                    Reset
+                </button>
+
+                <button type="button" class="btn btn-danger btn-hover" data-bs-toggle="modal"
+                    data-bs-target="#deleteModal">
+                    Delete
+                </button>
+            </div>
+
+
+        </form>
+    </div>
+
+    <div class="modal fade" id="deleteModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger">Confirm Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    Are you sure you want to delete this data?
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+                    </script>
+                    <script>
+                        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+                        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+                    </script>
+
+</body>
+
+</html>
