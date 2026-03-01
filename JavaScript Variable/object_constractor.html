@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function person1 (f,l,fn){
+            this.firstname= f;
+            this.lastname=l;
+            this.fullname = fn;
+        }
+        let x = new person1 ("Rakib", "Islam", "Rakib Islam");
+        document.write(x.firstname + " " +x.lastname);
+        //another 
+        document.write("<br>");
+        function person (name, age, cgpa){
+            this.name = name;
+            this.age = age;
+            this.cgpa =cgpa;
+        }
+        let y = new person ("Rakibul Islam",  "25", "3.50");
+        document.write(y.name +" <br>" + y.age + "<br>" + y.cgpa);
+        document.write("<br>");
+         let z = new person ("RanaIslam",  "30", "3.90");
+        document.write(z.name +" <br>" + z.age + "<br>" + z.cgpa);
+
+         document.write("<br>");
+         let a= new person ("Asadul Islam",  "24", "3.65");
+        document.write(a.name +" <br>" + a.age + "<br>" + a.cgpa);
+
+    </script>
+</body>
+</html>

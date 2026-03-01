@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <script> //ami amar iccha moto value niyea aikhane kaj korte parbo//
-        function addition (a,b){
-            total = a+b;
+        function addition(a, b) {
+            total = a + b;
             document.write(total)
         }
-        addition(12,8)
+        addition(12, 8)
         document.write("<br>")
-        addition(5,9)
+        addition(5, 9)
         document.write("<br>")
-        addition(12,20)
+        addition(12, 20)
         document.write("<br>")
-        addition(11,19)
+        addition(11, 19)
         document.write("<br>")
-        addition(42,8)
+        addition(42, 8)
         document.write("<br>")
-        addition(25,19)
+        addition(25, 19)
         document.write("<br>")
-        addition(12,80)
+        addition(12, 80)
         document.write("<br>")
-        addition(5,93)
+        addition(5, 93)
         document.write("<br>")
     </script>
     <script>
-        function add(price1, price2){
-            total = price1+price2;
+        function add(price1, price2) {
+            total = price1 + price2;
             document.write(total)
         }
         add(180, 240)
@@ -39,24 +41,93 @@
         add(240, 250)
     </script>
     <script>
-       let x = (a,b) => a+b;
-        console.log(x(3,2));
+        let x = (a, b) => a + b;
+        console.log(x(3, 2));
         document.write("<br>")
-        let y = (m,n) => m+n;
-        console.log(y(9,11))
+        let y = (m, n) => m + n;
+        console.log(y(9, 11))
         document.write("<br>")
-        const great = (a,b) => {
-            if(a>b)
-            return "a is greater";
-            else 
-            return "b is greater"
+        const great = (a, b) => {
+            if (a > b)
+                return "a is greater";
+            else
+                return "b is greater"
         }
-        console.log (great(3,5));
+        console.log(great(3, 5));
     </script>
-    <script>
-        setTimeout(function(){
+    <!-- <script>
+        setTimeout(function () {
             document.write("Print after 2 seconds")
-        },1000)
+        }, 4000)
+    </script> -->
+
+    <script>
+            (function (a, b) {
+                document.write(a + b);
+            })(3, 5);
+        document.write("<br>");
     </script>
+    <!-- //constructor function -->
+    <!-- <script>
+        function Student(name, roll, cls) {
+            this.name = name;
+            this.roll = roll;
+            this.class = cls;
+        }
+        let s1 = new Student("Rakib", 1, 10);
+        let s2 = new Student("Hasan", 2, 9);
+
+        console.log(s1);
+        console.log(s2);
+    </script> -->
+
+    <!-- <script>
+        function Student(name, roll, cls) {
+            this.name = name;
+            this.roll = roll;
+            this.class = cls;
+        }
+        let s1 = new Student("Rakib", 1, 10);
+        let s2 = new Student("Asadul", 2, 12);
+        document.write(s1.name + s1.roll, + s1.class)
+        document.write("name:" + s1.name + "<br>")
+        document.write("roll:" + s1.roll + "<br>")
+        document.write("class:" + s1.class + "<br>")
+        setTimeout(function () {
+            document.write("name:" + s1.name + "<br>")
+            document.write("roll:" + s1.roll + "<br>")
+            document.write("class:" + s1.class + "<br>")
+        }, 4000)
+    </script> -->
+    <!-- //assending number -->
+     <script>
+        var a = parseInt(prompt("Enter a number"));
+        var b = parseInt(prompt("Enter a number"));
+        var c = parseInt(prompt("Enter a number"));
+        if (a>b){
+            temp=a;
+            a=b;
+            b=temp;
+        }
+        if (a>c){
+            temp=c;
+            c=a;
+            temp=a;
+        }
+        if (b>c){
+            temp=b;
+            b=c;
+            c=temp;
+        }
+        document.write(a+" , "+b+" , "+c);
+     </script>
+     <script>
+        for (let i =0, i<=6; i++){
+            for (let j =1 <=row; j++) {
+                document.write(i+"'");
+            } 
+        }
+     </script>
 </body>
+
 </html>
