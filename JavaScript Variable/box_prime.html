@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime or Composite with Color</title>
+    <style>
+        #resultBox {
+            width: 1000px;
+            height: 500px;
+            padding: 200px, 200px;
+            border: 2px solid black;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+            margin-left: 150px;
+            text-align: center;
+            font-size: 80px;
+        }
+
+        .prime {
+            background-color: #0e8c91;
+            color: #ffffff;
+        }
+
+        .composite {
+            background-color: #8b0303;
+            color: #ffffff;
+
+        }
+        .special {
+            background-color: #410b0b;
+            /* grey */
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let num = parseInt(prompt("Enter a number:"));
+        let message = "";
+        let boxClass = "";
+
+        if (num === 0 || num === 1) {
+            message = num + " is neither Prime nor Composite";
+            boxClass = "special";
+        }
+        else {
+            let prime = true;
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    prime = false;
+                    break;
+                }
+            }
+
+            if (prime) {
+                message = num + " is a Prime Number";
+                boxClass = "prime";
+            } else {
+                message = num + " is a Composite Number";
+                boxClass = "composite";
+            }
+        }
+
+        document.write('<div id="resultBox" class="' + boxClass + '">' + message + '</div>');
+    </script>
+
+</body>
+
+</html>
