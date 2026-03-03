@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" name="f">
+        Name: <br>
+        <input type="text" name="n"> <br> <br>
+        Address: <br>
+        <textarea name="ad" id="" cols="30"></textarea> <br> <br>
+        G-mail: <br>
+        <input type="email" name="e" id=""> <br> <br>
+        
+        Round:
+        <select name="s" id="">
+            <option value="68">68</option>
+            <option value="69">69</option>
+            <option value="70">70</option>
+        </select>
+        
+        <button type="submit" onclick="info()">Submit</button> 
+        <button type="reset">Reset</button> 
+    </form>
+    
+    <script>
+        function  info(){
+            name = document.f.n.value;
+            ad = document.f.ad.value;
+            email = document.f.e.value;
+            select = document.f.s.value;
+            store = window.open("", "", "width=400px, height=500px");
+            store.document.write("Student Name: "+name+"<br>");
+            store.document.write("Address: " + ad + "<br>");
+            store.document.write("E-mail: " + email + "<br>");
+            store.document.write("Round:" + select);
+        }
+    </script>
+</body>
+</html>
