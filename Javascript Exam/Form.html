@@ -21,22 +21,52 @@
             <option value="69">69</option>
             <option value="70">70</option>
         </select>
-        
+        <br> <br>
+        Subjects:
+        <input type="checkbox" name="Subject" id="" value="HTML">HTML
+        <input type="checkbox" name="Subject" id="" value="CSS">CSS
+        <input type="checkbox" name="Subject" id="" value="JAVASCRIPT">JAVASCRIPT
+        <input type="checkbox" name="Subject" id="" value="BOOTSTRAP">BOOTSTRAP
+        <input type="checkbox" name="Subject" id="" value="PHP">PHP
+        <input type="checkbox" name="Subject" id="" value="LARAVEL">LARAVEL
+        <input type="checkbox" name="Subject" id="" value="ReactJs">ReactJs <br> <br>
+        Gender:
+        <input type="radio" name="s1" id="" value="Male">Male
+        <input type="radio" name="s1" id="" value="Female">Female
+        <input type="radio" name="s1" id="" value="Others">Others
+        <input type="radio" name="s1" id="" value="Banghu">Banghu <br> <br>
+
         <button type="submit" onclick="info()">Submit</button> 
         <button type="reset">Reset</button> 
     </form>
-    
+
     <script>
         function  info(){
             name = document.f.n.value;
             ad = document.f.ad.value;
             email = document.f.e.value;
             select = document.f.s.value;
+            sub="";
+            gender="";
+            for(i=0; i<document.f.Subject.length; i++){
+                if(document.f.Subject[i].checked){
+                    sub+=document.f.Subject[i].value+" , ";
+                }
+            }
+
+            for(i=0; i<document.f.s1.length; i++){
+                if(document.f.s1[i].checked){
+                    gender=document.f.s1[i].value;
+                    console.log("hi");
+                }
+            }
             store = window.open("", "", "width=400px, height=500px");
             store.document.write("Student Name: "+name+"<br>");
             store.document.write("Address: " + ad + "<br>");
             store.document.write("E-mail: " + email + "<br>");
-            store.document.write("Round:" + select);
+            store.document.write("Round: " + select+"<br>");
+            store.document.write("Subjects: " +sub+"<br>");
+            store.document.write("Gender: " +gender);
         }
     </script>
 </body>
