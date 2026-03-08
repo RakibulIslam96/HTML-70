@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    
+    <div style="max-width: max-content; border-radius: 10px; padding: 50px; margin:auto; background-color: aliceblue; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+
+        <form action="" name="F">
+            Name:
+            <input type="text" name="na"> <br> <br>
+
+            Email:
+            <input type="email" name="em" id=""> <br> <br>
+
+            Address: <br>
+            <textarea name="ad" id="" ></textarea> <br> <br>
+
+            Course:
+            <select name="co" id="">
+                <option value="M.B.A"> M.B.A</option>
+                <option value="B.S.C"> B.S.C</option>
+                <option value="B.S.A"> B.S.A</option>
+                <option value="B.C.S"> B.C.S</option>
+                <option value="M.B.S"> M.B.S</option>
+            </select> <br> <br>
+
+            Gender:
+            <input type="radio" name="ge" id="" value="Male"> Male 
+            <input type="radio" name="ge" id="" value="Female">Female 
+            <br> <br>
+
+            Subject:
+            <input type="checkbox" name="su" id=""> Bangla
+            <input type="checkbox" name="su" id=""> English
+            <input type="checkbox" name="su" id=""> Math
+            <br> <br>
+
+            <button type="submit" value="Submit">Submit</button> 
+            <button type="Reset" value="reset">Reset</button> 
+
+            <script>
+                function info (){
+                    name = document.F.na.value;
+                    Address = document.F.ad.value;
+                    Email = document.F.ga.value;
+                    select = document.F.co.value;
+                }
+            </script>
+        </form>
+    </div>
+</body>
+</html>
