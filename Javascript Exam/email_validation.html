@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Information</title>
+</head>
+
+<body>
+
+    <div
+        style="width: 300px; height: auto; background-color: rgb(217, 219, 219); padding:30px;margin:auto;text-align:left;border-radius:8px; ">
+        <form name="form">
+
+            <strong>Name:</strong><br>
+            <input type="text" name="name"><br><br>
+
+            <strong>Email:</strong><br>
+            <input type="text" name="e"><br><br>
+
+            <strong>Password:</strong> <br>
+            <input type="text" name="pa"> <br> <br>
+
+            <strong>Course:</strong>
+            <input type="checkbox" name="course" value="HTML"> HTML
+            <input type="checkbox" name="course" value="JavaScript"> JavaScript
+            <input type="checkbox" name="course" value="PHP"> PHP
+            <br><br>
+
+            <strong>Gender:</strong>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <input type="radio" name="gender" value="Others"> Others
+            <br><br>
+
+            <strong>Department:</strong>
+            <select name="se">
+                <option value="select">Select</option>
+                <option value="CSE">C.S.E</option>
+                <option value="EEE">E.E.E</option>
+                <option value="BBA">B.B.A</option>
+            </select>
+
+            <br><br>
+
+            <input type="button" value="Submit" onclick="info()">
+            <input type="reset" value="Reset">
+
+        </form>
+    </div>
+
+    <script>
+
+        function info() {
+
+            var name = document.form.name.value;
+            var email = document.form.e.value;
+            var dept = document.form.se.value;
+            var Password = document.form.pa.value;
+
+
+            if (name == "") {
+                alert("Please enter your name");
+                return false;
+            }
+
+            if (Password.length < 5 || Password.length > 8) {
+                alert("Password must be between 5 to 8 character");
+                return false;
+            }
+
+            var email = document.form.e.value;
+
+            if (email.indexOf("@") == -1) {
+                alert("Invalid Email, please include an '@' in the email address");
+                return false;
+            }
+
+            var course = "";
+            var courseCheck = false;
+
+            for (var i = 0; i < document.form.course.length; i++) {
+                if (document.form.course[i].checked) {
+                    course += document.form.course[i].value + " , ";
+                    courseCheck = true;
+                }
+            }
+
+            var gender = "";
+            var genderCheck = false;
+
+            for (var i = 0; i < document.form.gender.length; i++) {
+                if (document.form.gender[i].checked) {
+                    gender = document.form.gender[i].value;
+                    genderCheck = true;
+                }
+            }
+
+
+            var store = window.open("", "", "width=400,height=400");
+
+            store.document.write("Name: " + name + "<br>");
+            store.document.write("Email: " + email + "<br>");
+            store.document.write("Course: " + course + "<br>");
+            store.document.write("Gender: " + gender + "<br>");
+            store.document.write("Department: " + dept + "<br>");
+
+            store.document.write("<button onclick='window.close()'>Close me</button> ");
+            store.document.write("<button onclick='window.print()'>Print</button> ");
+        }
+
+    </script>
+
+</body>
+
+</html>

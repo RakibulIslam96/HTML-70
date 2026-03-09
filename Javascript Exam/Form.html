@@ -14,12 +14,12 @@
             Name: <br>
             <input type="text" name="n"> <br> <br>
 
-             G-mail: <br>
+            G-mail: <br>
             <input type="email" name="e" id=""> <br> <br>
-            
+
             Address: <br>
             <textarea name="ad" id="" cols="30"></textarea> <br> <br>
-           
+
 
             Course:
             <select name="s" id="">
@@ -49,35 +49,44 @@
 
     <script>
         function info() {
-            name = document.f.n.value;
-            ad = document.f.ad.value;
-            email = document.f.e.value;
-            select = document.f.s.value;
-            sub = "";
-            gender = "";
-            for (i = 0; i < document.f.Subject.length; i++) {
+            var name = document.f.n.value;
+            var ad = document.f.ad.value;
+            var email = document.f.e.value;
+            var select = document.f.s.value;
+
+            // Email Validation
+            var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(pattern)) {
+                alert("Please enter a valid email");
+                return false; // function stop হবে
+            }
+
+            // Subject collect করা
+            var sub = "";
+            for (var i = 0; i < document.f.Subject.length; i++) {
                 if (document.f.Subject[i].checked) {
                     sub += document.f.Subject[i].value + " , ";
                 }
             }
 
-            for (i = 0; i < document.f.s1.length; i++) {
+            // Gender collect করা
+            var gender = "";
+            for (var i = 0; i < document.f.s1.length; i++) {
                 if (document.f.s1[i].checked) {
                     gender = document.f.s1[i].value;
-                    console.log("hi");
                 }
             }
-            store = window.open("", "", "width=400px, height=500px");
+
+            // Window open এবং data দেখানো
+            var store = window.open("", "", "width=400px, height=500px");
             store.document.write("Student Name: " + name + "<br>");
             store.document.write("Address: " + ad + "<br>");
             store.document.write("E-mail: " + email + "<br>");
-            store.document.write("Round: " + select + "<br>");
+            store.document.write("Course: " + select + "<br>");
             store.document.write("Subjects: " + sub + "<br>");
             store.document.write("Gender: " + gender + "<br>");
-
-            store.document.write("<button onclick='window.close()'>Close me</button>  " + " " );
-            store.document.write("<button onclick='window.print()'>Print</button>  ");
-            
+            store.document.write("<button onclick='window.close()'>Close me</button> ");
+            store.document.write("<button onclick='window.print()'>Print</button> ");
         }
     </script>
 </body>
