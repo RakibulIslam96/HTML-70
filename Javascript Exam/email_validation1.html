@@ -8,8 +8,14 @@
 
 <body>
 
-    <div
-        style="width: 300px; height: auto; background-color: rgb(217, 219, 219); padding:30px;margin:auto;text-align:left;border-radius:8px; ">
+    <div style="
+        width: 320px;
+        background-color: #d9dbdb;
+        padding: 30px;
+        margin: auto;
+        border-radius: 10px;
+        font-family: Arial;
+    ">
         <form name="form">
 
             <strong>Name:</strong><br>
@@ -18,8 +24,8 @@
             <strong>Email:</strong><br>
             <input type="text" name="e"><br><br>
 
-            <strong>Password:</strong> <br>
-            <input type="text" name="pa"> <br> <br>
+            <strong>Password:</strong><br>
+            <input type="text" name="pa"><br><br>
 
             <strong>Course:</strong>
             <input type="checkbox" name="course" value="HTML"> HTML
@@ -50,7 +56,6 @@
     </div>
 
     <script>
-
         function info() {
 
             var name = document.form.name.value;
@@ -58,86 +63,78 @@
             var dept = document.form.se.value;
             var Password = document.form.pa.value;
 
-
+            // Name validation
             if (name == "") {
                 alert("Please enter your name");
                 return false;
             }
 
+            // Password validation
             if (Password.length < 5 || Password.length > 8) {
-                alert("Password must be between 5 to 8 character");
+                alert("Password must be between 5 to 8 characters");
                 return false;
             }
 
-            var email = document.form.e.value;
-
+            // Email validation
             if (email.indexOf("@") == -1) {
-                alert("Invalid Email, please include'@' ");
+                alert("Invalid Email, please include '@'");
                 return false;
             }
 
             if (email.indexOf(".") == -1) {
-                alert("Invalid Email, pleaseinclude dot (.) ");
+                alert("Invalid Email, please include dot (.)");
                 return false;
             }
 
-
+            // Course selection
             var course = "";
-            var courseCheck = false;
 
             for (var i = 0; i < document.form.course.length; i++) {
                 if (document.form.course[i].checked) {
-                    course += document.form.course[i].value + " , ";
-                    courseCheck = true;
+                    course += document.form.course[i].value + ", ";
                 }
             }
 
+            // Gender selection
             var gender = "";
-            var genderCheck = false;
 
             for (var i = 0; i < document.form.gender.length; i++) {
                 if (document.form.gender[i].checked) {
                     gender = document.form.gender[i].value;
-                    genderCheck = true;
                 }
             }
 
+            // Popup window
+            var store = window.open("", "", "width=450,height=450");
 
-            // var store = window.open("", "", "width=400,height=400");
+            // Card design inside popup
+            store.document.write(`
+                <div style="
+                    width: 320px;
+                    margin: 50px auto;
+                    padding: 20px;
+                    border: 1px solid gray;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px gray;
+                    font-family: Arial;
+                    background-color: #f5f5f5;
+                ">
+                    <h2 style="text-align:center;">Student Information</h2>
+                    <hr>
 
-            // store.document.write("Name: " + name + "<br>");
-            // store.document.write("Email: " + email + "<br>");
-            // store.document.write("Course: " + course + "<br>");
-            // store.document.write("Gender: " + gender + "<br>");
-            // store.document.write("Department: " + dept + "<br>");
+                    <p><strong>Name:</strong> ${name}</p>
+                    <p><strong>Email:</strong> ${email}</p>
+                    <p><strong>Course:</strong> ${course}</p>
+                    <p><strong>Gender:</strong> ${gender}</p>
+                    <p><strong>Department:</strong> ${dept}</p>
 
-            // store.document.write("<button onclick='window.close()'>Close me</button> ");
-            // store.document.write("<button onclick='window.print()'>Print</button> ");
+                    <hr>
 
-            var store = window.open("", "", "width=400,height=400");
-
-        store.document.write(`
-        <div style="
-        width: 300px;
-        margin: 50px auto;
-        padding: 20px;
-        border: 1px solid gray;
-        border-radius: 10px;
-        box-shadow: 0 0 10px gray;
-        font-family: Arial;">
-            
-        <h3 style="text-align:center;">Student Information</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Course:</strong> ${course}</p>
-        <p><strong>Gender:</strong> ${gender}</p>
-        <p><strong>Department:</strong> ${dept}</p>
-
-        <button onclick="window.close()">Close</button>
-        <button onclick="window.print()">Print</button>
-        </div>`);
+                    <button onclick="window.close()">Close</button>
+                    <button onclick="window.print()">Print</button>
+                </div>
+            `);
         }
-
     </script>
 
 </body>
