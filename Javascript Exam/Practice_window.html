@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+</head>
+
+<body>
+
+    <div style="
+        width: 320px;
+        height: auto;
+        background-color:rgb(226, 227, 228);
+        padding: 40px;
+        margin: auto;
+        margin-top: 60px;
+        border-radius: 10px;
+        font-family: sans-serif;
+        ">
+        <form name="form">
+            Name: <br>
+            <input type="text" name="n"> <br> <br>
+
+            E-mail: <br>
+            <input type="mail" name="e"> <br> <br>
+
+            Password: <br>
+            <input type="password" name="p"> <br> <br>
+
+            Course: <br>
+            <input type="checkbox" name="cbox" value="HTML"> HTML
+            <input type="checkbox" name="cbox" value="CSS"> CSS
+            <input type="checkbox" name="cbox" value="JavaScript"> JavaScript <br> <br>
+
+            Gender: <br>
+            <input type="radio" name="g" value="male"> Male
+            <input type="radio" name="g" value="Female"> Female
+            <input type="radio" name="g" value="others"> others <br> <br>
+
+            Department:
+            <select>
+                <option>Select here</option>
+                <option>B.S.C</option>
+                <option>C.S.C</option>
+                <option>H.S.C</option>
+                <option>J.S.C</option>
+                <option>P.S.C</option>
+            </select>
+            <br> <br>
+            <button input type="Submit" onclick="info()">Submit</button>
+            <button input type="reset">Reset</button>
+        </form>
+    </div>
+
+    <script>
+        function info() {
+            var name = document.form.n.value
+        }
+    </script>
+
+</body>
+
+</html>
