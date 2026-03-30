@@ -16,6 +16,7 @@
         padding: 40px;
         margin: auto;
         margin-top: 60px;
+        box-shadow: 0 0  10px gray;
         border-radius: 10px;
         font-family: sans-serif;
         ">
@@ -24,7 +25,7 @@
             <input type="text" name="n"> <br> <br>
 
             E-mail: <br>
-            <input type="mail" name="e"> <br> <br>
+            <input type="text" name="e"> <br> <br>
 
             Password: <br>
             <input type="password" name="p"> <br> <br>
@@ -49,15 +50,45 @@
                 <option>P.S.C</option>
             </select>
             <br> <br>
-            <button input type="Submit" onclick="info()">Submit</button>
-            <button input type="reset">Reset</button>
+            <input type="button" value="Submit" onclick="info()">
+            <input type="reset" value="Reset">
         </form>
     </div>
 
     <script>
         function info() {
-            var name = document.form.n.value
+            var name = document.form.n.value;
+            var email = document.form.e.value;
+            var password = document.form.p.value;
+
+            if (name == "") {
+                alert("please enter your name");
+
+            }
+
+            if (password.length < 5 || password.length > 8) {
+                alert("Password must be between 5 to 8 characters");
+                return false;
+            }
+
         }
+
+        //pop up window//
+
+        var store = window.open("", "", "width= 450, height=450");
+        store.document.write(`
+        <div style="
+        width:320px;
+        margin:50px auto;
+        padding: 20px;
+        border: 1px solid gray;
+        border-radius: 10px;
+        box-shadow: 0 0 10px gray;
+        font-family: sans-serif;
+        background-color: #f5f5f5;
+        ">
+        </div>
+        `);
     </script>
 
 </body>

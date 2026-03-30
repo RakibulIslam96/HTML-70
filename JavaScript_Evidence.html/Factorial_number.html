@@ -4,24 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factorail Number</title>
+    <title>Factorial Number</title>
 </head>
 
 <body>
 
     <script>
-        let num = parseInt(prompt("Enter a Number:"));
+
+        let num = parseInt(prompt("Enter a Number"));
         let fact = 1;
-        if (num < 0) {
-            document.write("Factorial is not possible");
+
+        if (num <= 0) {
+            document.write("Factorial is not Possible")
         }
         else {
-            for (let i = 1; i <= num; i++) {
+            for (i = 1; i <= num; i++) {
                 fact = fact * i;
             }
-            document.write("Factorial of " + num + " = " + fact);
+            document.write("Factorial of ", num, " = ", fact);
         }
-
     </script>
 
 </body>

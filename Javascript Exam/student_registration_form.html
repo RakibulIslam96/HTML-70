@@ -1,13 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Registration Form</title>
+    <title>Student Information</title>
 </head>
+
 <body>
-    
-    Name:                    
+
+    <div style="
+        height:450 px;
+        width: 450px;
+        background-color: #f5f5f5;
+        box-shadow: 0 0 10px gray;
+        border-radius:10px;
+        padding: 30px;
+        margin: 50px auto;
+        font-family:cursive; 
+        ">
+        <h3 style="text-align:center;">Student Information</h3>
+        <hr>
+        <form name="form">
+            Name: <br>
+            <input type="text" name="name"> <br> <br>
+
+            G-mail: <br>
+            <input type="text" name="gmail"> <br> <br>
+
+            Password: <br>
+            <input type="password" name="password"> <br> <br>
+
+            Department:
+            <select name="dep">
+                <option value="" hidden> Select Department</option>
+                <option value="Full Stack Developer"> Full Stack Developer </option>
+                <option value="Graphic Designer"> Graphic Designer </option>
+                <option value="Web Developer"> Web Developer </option> <br> <br>
+            </select> <br> <br>
+
+            <!-- <strong>Course:</strong>
+            <input type="checkbox" name="course" value="HTML"> HTML
+            <input type="checkbox" name="course" value="JavaScript"> JavaScript
+            <input type="checkbox" name="course" value="PHP"> PHP
+            <br><br> -->
+
+            Gender:
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Others <br> <br>
+
+            <input type="submit" onclick="info()" value="Submit">
+            <input type="reset">
+            <br> <br>
+            <hr>
+        </form>
+
+        <script>
+            function info() {
+                var name = document.form.name.value;
+                var gmail = document.form.gmail.value;
+                var password = document.form.password.value;
+                var department = document.form.dep.value;
+
+                if (name == "") {
+                    alert("Please Enter your name")
+                    return false;
+                }
+
+                if (password.length < 5 || password.length > 8) {
+                    alert("Password must be 5 to 8 charachter")
+                    return false;
+                }
+
+                if (gmail.indexOf("@") == -1) {
+                    alert("Invalid Email, please include '@'");
+                    return false;
+                }
+                if (gmail.indexOf(".") == -1) {
+                    alert("Invalid Email, please include '.'");
+                    return false;
+                }
+
+
+                var store = window.open("", "", "width= 450px, height= 450px");
+
+                store.document.write(`
+
+                 <div style="
+                    height:450px;
+                    width: 450px;
+                    background-color: #f5f5f5;
+                    box-shadow: 0 0 10px gray;
+                    border-radius:10px;
+                    padding: 30px;
+                    margin: 50px auto;
+                    font-family:cursive; 
+                    ">
+                    <h3 style="text-align:center;">Student Information</h3>
+                    <hr>
+
+                <p> Name: ${name} </p>
+                <p> G-mail: ${gmail} </p>
+                <p> Password: ${password} </p>
+                <p> Department: ${department} </p>
+                
+                 <button onclick="window.close()">Close</button>
+                    <button onclick="window.print()">Print</button>
+                <hr> 
+                </div>
+                `)
+            }
+        </script>
+    </div>
 
 </body>
+
 </html>
